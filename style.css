@@ -5,7 +5,7 @@
 }
 
 body {
-  background-image: url("./assets/bg.jpg");
+  background-image: url('./assets/bg.jpg');
   background-repeat: no-repeat; /* keyword */
   background-size: 100% auto; /* width height */
   background-position: top center; /* vertical (y) horizontal (x) */
@@ -14,7 +14,7 @@ body {
 }
 
 body * {
-  font-family: "Inter";
+  font-family: 'Inter';
   line-height: 160%;
 }
 
@@ -119,4 +119,42 @@ button:hover {
   cursor: pointer;
   transform: translateY(-2px);
   box-shadow: 0 5px 1rem rgba(255, 248, 107, 0.2);
+}
+
+button:disabled {
+  transition: initial;
+  transform: initial;
+  box-shadow: initial;
+  cursor: not-allowed;
+  color: black;
+}
+
+#aiResponse {
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 0.5rem;
+  padding: 1.25rem;
+  border-left: 4px solid #43e7ad;
+}
+
+#aiResponse ul {
+  padding-left: 1.5rem;
+  opacity: 0.8;
+}
+
+#aiResponse p {
+  color: white;
+}
+
+.hidden {
+  display: none;
+}
+
+.loading {
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  50% {
+    opacity: 0.5;
+  }
 }
